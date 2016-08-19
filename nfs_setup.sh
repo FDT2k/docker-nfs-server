@@ -6,8 +6,8 @@ mounts="${@}"
 
 for mnt in "${mounts[@]}"; do
   src=$(echo $mnt | awk -F':' '{ print $1 }')
- 
-	if [ !-d $src ]; then
+
+	if [ ! -d $src ]; then
 			mkdir -p $src
 	fi
 
